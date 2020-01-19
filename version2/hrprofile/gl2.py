@@ -40,7 +40,7 @@ for element in letters:
 
 rankings = soup.find_all("span", class_="span1 header8 value")
 
-li = ['person-you-work-for', 'people-you-work-with', 'work-setting', 'support-you-get', 'Rewards-you-receive', 'Growth-Oppurtunities', 'Company-culture', 'way-you-work']
+li = ['person-you-work-for', 'people-you-work-with', 'work-setting', 'support-you-get', 'Rewards-you-receive', 'Growth-Opportunities', 'Company-culture', 'way-you-work']
 
 for element in letters:
     for score,i in zip(rankings,li):
@@ -50,17 +50,17 @@ for element in letters:
     
 for item in lobbying.keys():
     print lobbying[item]["name"]+"( Review-ID:  "+item+ " ) :" + "\n\t" +"link: " + lobbying[item]["link"] + "\n\t" + "comment: " + lobbying[item]["comm"]
-    print "\nRatings: \n1.person-you-work-for: "+lobbying[item]["person-you-work-for"]+"\n2.people-you-work-with"+lobbying[item]["people-you-work-with"]+"\n3.work-setting"+lobbying[item]["work-setting"]+"\n4.support-you-get"+lobbying[item]["support-you-get"]+"\n5.Rewards-you-receive"+lobbying[item]["Rewards-you-receive"]+"\n6.Growth-Oppurtunities"+lobbying[item]["Growth-Oppurtunities"]+"\n7.Company-culture"+lobbying[item]["Company-culture"]+"\n8.way-you-work"+lobbying[item]["way-you-work"]+"\n\n"
-    
+    print "\nRatings: \n1.person-you-work-for: "+lobbying[item]["person-you-work-for"]+"\n2.people-you-work-with"+lobbying[item]["people-you-work-with"]+"\n3.work-setting"+lobbying[item]["work-setting"]+"\n4.support-you-get"+lobbying[item]["support-you-get"]+"\n5.Rewards-you-receive"+lobbying[item]["Rewards-you-receive"]+"\n6.Growth-Opportunities"+lobbying[item]["Growth-Opportunities"]+"\n7.Company-culture"+lobbying[item]["Company-culture"]+"\n8.way-you-work"+lobbying[item]["way-you-work"]+"\n\n"
+    https://github.com/SHOBANAM93/HRMate.git
 
 import csv
 
 
 with open("lobbying2.csv", "w") as toWrite:
     writer = csv.writer(toWrite, delimiter=",")
-    writer.writerow(["name", "link","comm","person-you-work-for","people-you-work-with","work-setting","support-you-get","Rewards-you-receive","Growth-Oppurtunities","Company-culture","way-you-work" ])
+    writer.writerow(["name", "link","comm","person-you-work-for","people-you-work-with","work-setting","support-you-get","Rewards-you-receive","Growth-Opportunities","Company-culture","way-you-work" ])
     for item in lobbying.keys():
-        writer.writerow([lobbying[item]["name"], lobbying[item]["link"], lobbying[item]["comm"],lobbying[item]["person-you-work-for"],lobbying[item]["people-you-work-with"],lobbying[item]["work-setting"],lobbying[item]["support-you-get"],lobbying[item]["Rewards-you-receive"],lobbying[item]["Growth-Oppurtunities"],lobbying[item]["Company-culture"],lobbying[item]["way-you-work"]])
+        writer.writerow([lobbying[item]["name"], lobbying[item]["link"], lobbying[item]["comm"],lobbying[item]["person-you-work-for"],lobbying[item]["people-you-work-with"],lobbying[item]["work-setting"],lobbying[item]["support-you-get"],lobbying[item]["Rewards-you-receive"],lobbying[item]["Growth-Opportunities"],lobbying[item]["Company-culture"],lobbying[item]["way-you-work"]])
         
 import json
 
